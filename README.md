@@ -1,5 +1,4 @@
-# :earth_americas: GDP dashboard template
-
+# : Travail de leti et Kaou
 A simple Streamlit app showing the GDP of different countries in the world.
 
 https://dc-ves-modelling-leti-kaou.streamlit.app/
