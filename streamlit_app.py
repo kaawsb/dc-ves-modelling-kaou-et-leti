@@ -1,4 +1,5 @@
 # ==============================================================
+st.error("✅ VERSION LATEX FIX — 15/12")
 # 1D DC Forward Modelling (SimPEG)
 # Schlumberger & Wenner — Application Streamlit pédagogique
 #
