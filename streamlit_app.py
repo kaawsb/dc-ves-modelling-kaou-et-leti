@@ -475,40 +475,75 @@ with tab_model:
 
 
 # --------------------------------------------------------------
-# Onglet 3 : Théorie rapide
+# Onglet 3 : Théorie rapide (AFFICHAGE LaTeX PROPRE)
 # --------------------------------------------------------------
 with tab_theory:
 
     st.subheader("Rappels théoriques")
 
+    # =========================
+    # # Loi d'Ohm (scalaire)
+    # =========================
+    st.markdown("### Loi d’Ohm (scalaire)")
+    st.latex(r"U = R\,I")
+
+    # =========================
+    # # Résistivité
+    # =========================
+    st.markdown("### Résistivité")
+    st.latex(r"\rho = R\,\frac{A}{L}")
+    st.markdown("- Unité : **Ω·m**")
+
+    # =========================
+    # # Conductivité
+    # =========================
+    st.markdown("### Conductivité")
+    st.latex(r"\sigma = \frac{1}{\rho}")
+    st.markdown("- Unité : **S/m**")
+
+    # =========================
+    # # Loi d'Ohm (vectorielle)
+    # =========================
+    st.markdown("### Loi d’Ohm (vectorielle)")
+    st.latex(r"\vec{J} = \sigma\,\vec{E}")
     st.markdown(
-        r"""
-        **Loi d’Ohm (scalaire)**  
-        \( U = RI \)
-
-        **Résistivité**  
-        \( \rho = R\,\dfrac{A}{L} \)
-
-        **Conductivité**  
-        \( \sigma = \dfrac{1}{\rho} \)
-
-        **Loi d’Ohm vectorielle**  
-        \( \vec{J} = \sigma \vec{E} \)
-
-        **VES (Vertical Electrical Sounding)**  
-        - On augmente AB/2 → profondeur d’investigation augmente  
-        - On mesure ρₐ(AB/2) pour détecter les changements latéraux de couches  
-
-        **Dispositif Schlumberger**  
-        - A et B : électrodes de courant  
-        - M et N : électrodes de potentiel proches du centre  
-
-        **Dispositif Wenner**  
-        - 4 électrodes régulièrement espacées  
-
+        """
+        - \(\\vec{J}\) : densité de courant (**A/m²**)  
+        - \(\\vec{E}\) : champ électrique (**V/m**)  
         """
     )
 
-st.caption(
-    "Astuce : change le scénario dans la sidebar pour voir l’effet d’une couche conductrice ou résistante."
-)
+    # =========================
+    # # VES (Vertical Electrical Sounding)
+    # =========================
+    st.markdown("### VES (Vertical Electrical Sounding)")
+    st.markdown(
+        """
+        - On augmente **AB/2** → la **profondeur d’investigation** augmente  
+        - On mesure **ρₐ(AB/2)** pour détecter les **changements de couches**  
+        """
+    )
+
+    # =========================
+    # # Dispositif Schlumberger
+    # =========================
+    st.markdown("### Dispositif Schlumberger")
+    st.markdown(
+        """
+        - **A, B** : électrodes de courant  
+        - **M, N** : électrodes de potentiel proches du centre (**MN/2 ≪ AB/2**)  
+        """
+    )
+
+    # =========================
+    # # Dispositif Wenner
+    # =========================
+    st.markdown("### Dispositif Wenner")
+    st.markdown(
+        """
+        - 4 électrodes régulièrement espacées de **a** : **A–M–N–B**  
+        """
+    )
+    st.latex(r"AB = 3a \quad \text{et} \quad MN = a")
+
+    st.info("Astuce : change le scénario dans la sidebar pour voir l’effet d’une couche conductrice ou résistante.")
